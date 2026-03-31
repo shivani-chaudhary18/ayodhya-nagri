@@ -1,13 +1,359 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ayodha-nagri</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayodhya Nagri | Darshan, Hotels & Souvenirs</title>
+  <meta name="description" content="Plan your Ayodhya trip, book hotels, arrange darshan and shop curated souvenirs with one local concierge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-badge">A</div>
+      <div class="brand-text">
+        <span class="brand-title">Ayodhya Nagri</span>
+        <span class="brand-sub">Darshan | Hotels | Souvenirs</span>
+      </div>
+    </div>
+    <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="burger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#spots">Spots</a>
+      <a href="#stays">Hotels</a>
+      <a href="#market">Market</a>
+      <a href="#products">Souvenirs</a>
+      <a href="#plan">Plan</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="pill ghost" id="cart-pill">Souvenir cart (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow light">Ayodhya, Uttar Pradesh</p>
+        <h1>Plan darshan, book a stay, and get souvenirs delivered in one place.</h1>
+        <p class="lede light">Temple timings, trusted hotels, airport transfers, curated puja kits and mementos - guided by locals.</p>
+        <div class="actions">
+          <a class="pill primary" href="#plan">Plan my trip</a>
+          <a class="pill light" href="#products">Shop souvenirs</a>
+        </div>
+        <div class="hero-badges">
+          <span class="chip light">Same-day concierge (9am-9pm IST)</span>
+          <span class="chip light">Airport/rail pickup arranged</span>
+          <span class="chip light">COD & online payments</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-band" id="highlights">
+      <article class="info-card saffron">
+        <h3>Darshan ready</h3>
+        <p>Timings, crowd peaks, and permitted items shared before you arrive. Assistance for elders on request.</p>
+        <a class="pill light small" href="#spots">See main spots</a>
+      </article>
+      <article class="info-card teal">
+        <h3>Hotels & stays</h3>
+        <p>Trusted properties near Ram Janmabhoomi, Naya Ghat, and Ring Road. We block rooms and share GST invoices.</p>
+        <a class="pill light small" href="#stays">Browse stays</a>
+      </article>
+      <article class="info-card deep">
+        <h3>Souvenirs & puja kits</h3>
+        <p>Locally sourced prasad boxes, diyas, and artisanal keepsakes with city delivery or pickup.</p>
+        <a class="pill light small" href="#products">Shop now</a>
+      </article>
+    </section>
+
+    <section class="section" id="spots">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Spots to visit</p>
+          <h2>Essential Ayodhya circuit</h2>
+          <p class="muted">Sunrise aarti to evening Saryu worship - plan by time of day and distance.</p>
+        </div>
+        <a class="pill ghost" href="https://www.google.com/maps/place/Ayodhya,+Uttar+Pradesh" target="_blank" rel="noreferrer">Open in Google Maps</a>
+      </div>
+      <div id="spot-grid" class="spot-grid"></div>
+    </section>
+
+    <section class="section soft" id="circuits">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Ready itineraries</p>
+          <h2>Day plans that beat the rush</h2>
+        </div>
+        <p class="muted">Share your check-in time; we adjust sequencing and transport.</p>
+      </div>
+      <div class="circuit-grid">
+        <article class="circuit">
+          <h3>Sunrise to noon</h3>
+          <ul>
+            <li>05:30 Saryu aarti at Ram ki Paidi</li>
+            <li>07:00 Darshan at Shri Ram Janmabhoomi Mandir</li>
+            <li>09:00 Hanuman Garhi climb and prasad</li>
+            <li>11:00 Kanak Bhavan (golden palace) visit</li>
+          </ul>
+        </article>
+        <article class="circuit">
+          <h3>Evening circuit</h3>
+          <ul>
+            <li>16:30 Nageshwarnath Temple</li>
+            <li>17:30 Treta ke Thakur & Dashrath Mahal</li>
+            <li>18:15 Saryu sunset boat ride</li>
+            <li>19:00 Ram ki Paidi deep daan</li>
+          </ul>
+        </article>
+        <article class="circuit">
+          <h3>Day trip add-ons</h3>
+          <ul>
+            <li>Guptar Ghat meditation stretch</li>
+            <li>Raj Sadan Museum for relics</li>
+            <li>Ayodhya Haat for crafts shopping</li>
+            <li>Local sweets walk at Chowk bazaar</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section market" id="market">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Local marketplace</p>
+          <h2>Support Ayodhya vendors</h2>
+          <p class="muted">Verified shopkeepers and artisans can list their products and take orders.</p>
+        </div>
+        <div class="chip dark">COD & online payments</div>
+      </div>
+
+      <div class="market-layout">
+        <div>
+          <h3>Featured vendors</h3>
+          <div class="chip-row" id="vendor-filters" aria-label="Filter vendors">
+            <button class="chip dark active" data-type="all">All</button>
+            <button class="chip dark" data-type="Puja items">Puja</button>
+            <button class="chip dark" data-type="Handicrafts">Handicrafts</button>
+            <button class="chip dark" data-type="Food specialties">Food</button>
+            <button class="chip dark" data-type="Clothing / souvenirs">Wearables</button>
+          </div>
+          <div id="vendor-grid" class="vendor-grid"></div>
+        </div>
+        <div class="form-wrap vendor-form">
+          <p class="eyebrow">For shop owners</p>
+          <h3>List your products</h3>
+          <form id="vendor-form">
+            <label>Shop / brand name<input name="vendorName" required placeholder="Sharma Prasad Bhandar"></label>
+            <label>Owner contact (phone / WhatsApp)<input name="vendorPhone" required placeholder="+91 9xxxxxxxxx"></label>
+            <label>Business type
+              <select name="vendorType">
+                <option>Prasad & puja items</option>
+                <option>Handicrafts</option>
+                <option>Food specialties</option>
+                <option>Clothing / souvenirs</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>Top products (comma separated)<textarea name="vendorProducts" rows="2" required placeholder="Ram darbar idols, khoya peda, wooden diyas"></textarea></label>
+            <label>Do you deliver locally?
+              <select name="vendorDelivery">
+                <option value="Yes">Yes</option>
+                <option value="Pickup only">Pickup only</option>
+              </select>
+            </label>
+            <label>Shop address / landmark<textarea name="vendorAddress" rows="2" required placeholder="Near Hanuman Garhi, Ayodhya"></textarea></label>
+            <label>Notes (timings, closed days, GST)<textarea name="vendorNotes" rows="2" placeholder="Open 8am-9pm, weekly off Tuesday, GST available"></textarea></label>
+            <div class="form-actions">
+              <button type="submit" class="pill primary" id="vendor-submit">Submit listing</button>
+              <p class="muted">We verify by phone within 1 business day.</p>
+            </div>
+            <div id="vendor-status" class="status" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="products">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Souvenirs & puja kits</p>
+          <h2>Curated picks with local delivery</h2>
+        </div>
+        <p class="muted">Tap to add to your souvenir cart; pay on delivery or online.</p>
+      </div>
+      <div class="filter-bar">
+        <input type="search" id="product-search" placeholder="Search souvenirs or puja items">
+        <div class="chip-row" id="product-filters" role="listbox" aria-label="Filter souvenirs">
+          <button class="chip dark active" data-cat="all">All</button>
+          <button class="chip dark" data-cat="puja">Puja kits</button>
+          <button class="chip dark" data-cat="idol">Idols</button>
+          <button class="chip dark" data-cat="textile">Shawls & wearables</button>
+          <button class="chip dark" data-cat="food">Sweets</button>
+          <button class="chip dark" data-cat="craft">Crafts</button>
+        </div>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="section stays" id="stays">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Hotels & guest houses</p>
+          <h2>Stay close to the ghats or the temple</h2>
+          <p class="muted">We hold rooms while you confirm. GST invoices and airport pickup available.</p>
+        </div>
+      </div>
+      <div class="stay-grid" id="stay-grid"></div>
+    </section>
+
+    <section class="section order" id="plan">
+      <div class="form-wrap">
+        <p class="eyebrow">Trip concierge</p>
+        <h2>Send one request for hotels, darshan help, and souvenirs</h2>
+        <form id="plan-form">
+          <div class="field-grid">
+            <label>Full name<input name="name" required placeholder="Your name" autocomplete="name"></label>
+            <label>Email<input type="email" name="email" required placeholder="you@example.com" autocomplete="email"></label>
+            <label>Phone / WhatsApp<input type="tel" name="phone" required placeholder="+91 98xxxxxxx" autocomplete="tel"></label>
+            <label>City you travel from<input name="city" placeholder="Lucknow / Delhi / Mumbai"></label>
+            <label>Check-in<input type="date" name="checkin" required></label>
+            <label>Check-out<input type="date" name="checkout" required></label>
+            <label>Guests<select name="guests"><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+            <label>Trip intent
+              <select name="intent">
+                <option>Darshan + hotel</option>
+                <option>Hotel only</option>
+                <option>Guided circuit</option>
+                <option>Souvenir delivery only</option>
+              </select>
+            </label>
+            <label>Budget per night
+              <select name="budget">
+                <option value="3-4k">Rs 3k-4.5k</option>
+                <option value="4-6k">Rs 4.5k-6k</option>
+                <option value="6-9k">Rs 6k-9k</option>
+                <option value="9k-plus">Rs 9k+</option>
+              </select>
+            </label>
+            <label>Preferred zone
+              <select name="zone">
+                <option>Near Ram Janmabhoomi</option>
+                <option>Saryu / Naya Ghat</option>
+                <option>Ring Road (quieter)</option>
+                <option>No preference</option>
+              </select>
+            </label>
+          </div>
+          <fieldset class="checkboxes">
+            <legend>Experiences to include</legend>
+            <label><input type="checkbox" name="experiences" value="Ram Janmabhoomi darshan" checked> Ram Janmabhoomi darshan</label>
+            <label><input type="checkbox" name="experiences" value="Hanuman Garhi climb"> Hanuman Garhi</label>
+            <label><input type="checkbox" name="experiences" value="Evening Saryu aarti"> Evening Saryu aarti</label>
+            <label><input type="checkbox" name="experiences" value="Boat ride"> Boat ride</label>
+            <label><input type="checkbox" name="experiences" value="Ayodhya Haat shopping"> Ayodhya Haat shopping</label>
+          </fieldset>
+          <label>Anything else?<textarea name="notes" rows="3" placeholder="Wheelchair, airport pickup, early check-in, vegetarian meals…"></textarea></label>
+          <div class="form-actions">
+            <button type="submit" class="pill primary" id="plan-submit">Send request</button>
+            <p class="muted" id="plan-hint">We respond within 2 hours (9am-9pm IST). Your souvenir cart is attached.</p>
+          </div>
+          <div id="plan-status" class="status" role="status"></div>
+        </form>
+      </div>
+
+      <aside class="cart" id="cart">
+        <div class="cart-head">
+          <h3>Souvenir cart</h3>
+          <button class="ghost" id="clear-cart" type="button">Clear</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-summary">
+          <div class="line"><span>Subtotal</span><strong id="subtotal">Rs 0</strong></div>
+          <div class="line"><span>Packaging</span><span class="muted">Included</span></div>
+          <div class="line total"><span>Total</span><strong id="total">Rs 0</strong></div>
+        </div>
+        <div id="cart-empty" class="muted">Add souvenirs or keep this empty if you only need travel help.</div>
+        <div id="cart-status" class="status" role="status"></div>
+      </aside>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Questions</p>
+          <h2>FAQ for travelers & vendors</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>How do payments work?</summary>
+          <p>For souvenirs you can pay cash on delivery or via online link. Hotel blocks are held without prepayment; final payment goes directly to the property on check-in unless you request a prepaid link.</p>
+        </details>
+        <details>
+          <summary>Can I get airport/rail pickup?</summary>
+          <p>Yes. Share your flight/train number in the plan form notes; we arrange a driver who knows temple-side drop points and luggage rules.</p>
+        </details>
+        <details>
+          <summary>How are vendors verified?</summary>
+          <p>We call each shop, verify address/ID, and place a test order. New listings stay in “pending” until that check is done.</p>
+        </details>
+        <details>
+          <summary>What if I only need darshan help?</summary>
+          <p>Select “Guided circuit” in the plan form. We’ll skip hotels and souvenirs and just share the timetable and local help.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Talk to a local concierge</h2>
+        <p class="muted">Share train/flight times and we’ll stitch a smooth plan.</p>
+        <div class="contact-grid">
+          <div><strong>WhatsApp</strong><a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">+91 98765 43210</a></div>
+          <div><strong>Email</strong><a href="mailto:concierge@ayodhyanagri.com">concierge@ayodhyanagri.com</a></div>
+          <div><strong>Location</strong><span>Ayodhya city | Assistance in Hindi & English</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wood">
+    <div class="footer-inner">
+      <div class="logo-block">
+        <div class="brand-badge large">A</div>
+        <div class="brand-text">
+          <span class="brand-title">Ayodhya Nagri</span>
+          <span class="brand-sub">Darshan | Hotels | Souvenirs</span>
+        </div>
+      </div>
+      <div class="site-index">
+        <strong>Site index</strong>
+        <a href="#hero">Home</a>
+        <a href="#spots">Spots</a>
+        <a href="#stays">Hotels</a>
+        <a href="#products">Souvenirs</a>
+        <a href="#plan">Plan</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="contact-stack">
+        <strong>Concierge hours</strong>
+        <span>Daily: 09:00-21:00 IST</span>
+        <span>Phone/WhatsApp: +91 98765 43210</span>
+        <span>Email: concierge@ayodhyanagri.com</span>
+      </div>
+    </div>
+    <div class="foot-note">(c) <span id="year"></span> Ayodhya Nagri. Devloped by Shivani Chaudhary</div>
+  </footer>
+
+  <a class="fab" href="https://wa.me/919876543210" target="_blank" rel="noreferrer">Need help?</a>
+
+  <script src="script.js"></script>
+</body>
 </html>
